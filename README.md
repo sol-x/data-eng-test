@@ -101,5 +101,5 @@ Location: `https://53c1a51d-616b-4aea-9e2a-89b2c8024b72-bluemix.cloudant.com/eve
 - To fetch all the records in the `events` database
 
   ```shell
-  $ curl https://53c1a51d-616b-4aea-9e2a-89b2c8024b72-bluemix.cloudant.com/events/_all_docs?include_docs=true
+  $ curl "https://53c1a51d-616b-4aea-9e2a-89b2c8024b72-bluemix.cloudant.com/events/_all_docs?include_docs=true"
   ```
