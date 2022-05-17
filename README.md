@@ -2,7 +2,7 @@
 
 ## Instructions
 
-- Build an ETL process that would transform the data from `data/location.json` and `https://53c1a51d-616b-4aea-9e2a-89b2c8024b72-bluemix.cloudant.com/events` to the desired schemas and store them in a SQL database.
+- Build an ETL process that would transform the data from loaded from a local file i.e. `data/location.json` and from a remote data source i.e. `https://53c1a51d-616b-4aea-9e2a-89b2c8024b72-bluemix.cloudant.com/events` to the desired schemas and store them in a SQL database.
 
 - Desired schema 1:
 
@@ -14,6 +14,9 @@
   | location   | Location i.e. where the user was when the event triggered |
   | timestamp  | Date time                                                 |
 
+  **Note:** This is essentially the same data as what is found in the remote CouchDB database but enriched with location. The output should have the same number of rows as the remote CouchDB database. 
+
+
 - Desired schema 2:
 
   | Column      | Description                                           |
@@ -24,13 +27,13 @@
   | time_spent  | Total time spent at location in minutes               |
   | visit_count | Count of how many times the user was at that location |
 
-- You can use a SQLite database if you do not want to set up a proper SQL database for this test.
+- You can use a SQLite database if you do not want to set up a proper SQL database for this test but do write the code such that it would be trivial if a switch to a proper SQL database is required.
 
-- Please write this code as though it will be deployed to a production environment.
+- Please write this code as though it will be ***deployed to a production*** environment.
 
 ## Submitting your solution
 
-Please archive the entire test directory and email your solution back to us. Please do not fork the project on git or submit a pull request with your solution as we would prefer it to remain private.
+Please archive the entire test directory and email your solution back to us. Please ***do not fork*** the project on git or submit a pull request with your solution as we would prefer it to remain private.
 
 ```shell
 $ git archive -o <candidate-name>-submission.zip HEAD
